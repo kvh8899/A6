@@ -1,11 +1,11 @@
+
 {
-	"data": 
-	[		
-		{
-			"name": "John",
-			"age": "50",
-			"city": "San Diego",
-			"state": "California"
-		}	
-	]
+    "data":[
+                {
+                    "name": "Elias",
+                    "age": "50",
+                    "city": "San Diego",
+                    "state": "California"
+                }
+            ]
 }
