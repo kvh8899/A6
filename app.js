@@ -13,6 +13,7 @@ var record = require('./routes/record');
 var forum = require('./routes/forum');
 var help = require('./routes/help');
 var profile = require('./routes/profile');
+var addRecords = require('./routes/addRecords');
 // Example route
 // var user = require('./routes/user');
 
@@ -45,6 +46,7 @@ app.get("/record",record.viewR);
 app.get("/help",help.viewHelp);
 app.get("/forum",forum.viewForum);
 app.get("/profile",profile.viewProfile);
+app.get("/addRecords",addRecords.addData);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

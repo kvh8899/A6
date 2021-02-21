@@ -2,6 +2,9 @@
 <head>
 	<title>Wellness Tracker</title>
 	<meta charset="utf-8">
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="routes/addRecords"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -23,12 +26,12 @@
   </div>
     <h3 class="title">Record Data</h3>
 		<div class="submitform">
-				<form>
+				<form id="addRecord" role="form" method="get" action="/addRecords">
 					<label class="formlabels" for="date">Date:</label>
-					<input type="text" id="date" name="date"><br>
+					<input type="text" class="forLabels" id="date" placeholder="mm/dd/yyyy" name="date"><br>
 
 					<label class="formlabels" for="title">Title:</label>
-					<input type="text" id="title" name="title"><br>
+					<input type="text" class="forLabels" id="title" placeholder="Title" name="title"><br>
 
 					<label class="formlabels2" for="subject" class="recordlabel">Subject:</label>
 					<select name="Subject" id="subject" class="recordsel">
@@ -36,6 +39,7 @@
 						<option value="Mood">Mood</option>
 						<option value="Excercise">Excercise</option>
 					</select><br>
+					<input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
 				</form>
 
 		</div><br>
@@ -53,6 +57,9 @@
 		<button type="button" class="cancel">Cancel</button>
 		<button type="button" class="save">Save</button>
 	</div>
+	</div>
+
+</div>
 
 
 </body>
