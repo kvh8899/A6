@@ -1,0 +1,40 @@
+h1 {
+	font-weight: bold;
+	text-align: center;
+	margin-top: 40%;
+	margin-bottom: 15%;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover {
+  opacity: 1;
+}
+
+input[type=text] {
+	border: solid;
+}
+
+input[type=password] {
+	border: solid;
+}
+
+input[type=submit] {
+	background-color: #006A96;
+	color: white;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+  	background-color: #2d9dcc;
+}
