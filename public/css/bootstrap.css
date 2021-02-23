@@ -1991,11 +1991,26 @@ margin-left: -20px;
   outline: none;
   margin-right: 30px;
 }
+.cancel:hover{
+  background-color: blue;
+}
 .save{
   background-color: black;
   color: white;
   border: none;
   outline: none;
+}
+.goback{
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+}
+.goback:hover{
+  background-color: blue;
+}
+.finish{
+  display: none;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
