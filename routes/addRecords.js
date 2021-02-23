@@ -6,8 +6,8 @@ exports.addData = function(request, response) { 
 		"date": request.query.date,
 		"title": request.query.title,
 		"subject": request.query.subject,
-		"time": request.query.time,
-		"scale": request.query.scale
+		//"time": request.query.time,
+		//"scale": request.query.scale
 	};
 	records.records.push(recordData);
 	console.log(records);
