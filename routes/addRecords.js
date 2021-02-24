@@ -11,6 +11,6 @@ exports.addData = function(request, response) { 
 	};
 	records.records.push(recordData);
 	console.log(records);
-	console.log(records["data"]);
+	//console.log(records["data"]);*/
 	response.render("record", records);
 }

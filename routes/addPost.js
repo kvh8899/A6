@@ -4,6 +4,7 @@ exports.post = function(request, response) { 
 	var postData = {
 		"topic": request.query.topic,
 		"message": request.query.message,
+		"recordName": request.query.recordName
 	};
 	posts.posts.push(postData);
 	console.log(posts);
