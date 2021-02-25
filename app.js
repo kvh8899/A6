@@ -14,6 +14,7 @@ var forum = require('./routes/forum');
 var help = require('./routes/help');
 var profile = require('./routes/profile');
 var addRecords = require('./routes/addRecords');
+var login = require('./routes/index');
 // Example route
 // var user = require('./routes/user');
 
