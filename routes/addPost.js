@@ -11,3 +11,4 @@ exports.post = function(request, response) { 
 	//console.log(records["data"]);
 	response.render("forum", posts);
 }
+

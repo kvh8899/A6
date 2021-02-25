@@ -6,6 +6,7 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="routes/addPost"></script>
 	<script src="routes/addRecords.js"></script>
+	<script src="routes/forumLink.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -14,6 +15,9 @@
 	<script src="/js/bar.js"></script>
 	<script src="/js/popUp.js"></script>
 	<script src="/js/forumRecords.js"></script>
+	<script src="/js/deletePosts2.js"></script>
+
+
 </head>
 
 <body>
@@ -30,18 +34,23 @@
   </div>
     <h3 class="title">Forum</h3>
     <br>
-    <button onClick="openModal()" id="button">+ Add a new post</button>
+    <button onClick="openModal()" id="button">+ Add a new post</button><br><br>
 
+    
     {{#each posts}}
+    
+    <button id="post">
 		<div class="posts">
 		
 			<h3>{{topic}}</h3>
 		
 			<p>{{message}}</p>
-			<p>{{recordName}}<p>
+			<p>{{recordName}}<p><br><br>
 		</div>
+		</button><br><br>
+	
 	{{/each}}
-    
+   
     <div id="myModal" class="modal">
 
     	<div class="modal-content">
@@ -52,8 +61,8 @@
 					<input type="text" class="forLabels" id="topic" name="topic"><br><br>
 					<label class="formlabelsMessage" for="message">Message:</label>
 					<textarea name="message" rows="10" cols="30"></textarea><br><br>
-						<label for="title" class="formlabels">Choose a record:</label>
-						 <input type="button" value="Click"onClick="forumRecord()">
+						<label for="title" class="formlabels">Find records:</label>
+						 <input type="button" value="Attach"onClick="forumRecord()">
 						<select class="formLabels" id="arr" name="recordName"></select>
 						<br><br>
 						

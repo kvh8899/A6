@@ -15,6 +15,8 @@ var help = require('./routes/help');
 var profile = require('./routes/profile');
 var addRecords = require('./routes/addRecords');
 var addPost = require('./routes/addPost');
+var forumLink = require('./routes/forumLink');
+var deletePosts2 = require('./routes/deletePosts2');
 // Example route
 // var user = require('./routes/user');
 
@@ -50,6 +52,8 @@ app.get("/forum",forum.viewForum);
 app.get("/profile",profile.viewProfile);
 app.get("/addRecords",addRecords.addData);
 app.get("/addPost",addPost.post);
+app.get("/forumLink", forumLink.link);
+app.get("/deletePosts2", deletePosts2.delete);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

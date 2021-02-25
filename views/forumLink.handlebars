@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Wellness Tracker</title>
+	<meta charset="utf-8">
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="routes/addPost"></script>
+	<script src="routes/addRecords.js"></script>
+	<script src="routes/forumLink.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/post.css" rel="stylesheet">
+	<script src="/js/bar.js"></script>
+	<script src="/js/popUp.js"></script>
+	<script src="/js/forumRecords.js"></script>
+</head>
+
+<body>
+	<div id="main" class="screen">
+		<div class="dropdown">
+		<button onClick="openMenu()" class="dropbtn">&#9776;</button>
+		<div id="sidebar" class="dropdown-content">
+			<a class="selected" href="/">Home</a>
+			<a href="record">Record</a>
+			<a href="forum">Forum</a>
+			<a href="profile">Profile</a>
+			<a href="help">Help</a>
+		</div>
+		{{#each posts}}
+			<h3 class="title">{{topic}}</h3>
+		{{/each}}
+  </div>
+</div>
+</body>
+</html>
