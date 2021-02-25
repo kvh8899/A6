@@ -182,7 +182,16 @@ samp {
   line-height: 100px;
   margin-left: -950px;
 }
-
+.logout{
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.logout:hover{
+  color: steelblue;
+  text-decoration: underline;
+}
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {color: blue;}
 .data:hover .dropmenu {color: blue;}

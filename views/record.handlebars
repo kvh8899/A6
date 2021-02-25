@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -19,11 +19,12 @@
 		<div class="dropdown">
 		<button onClick="openMenu()" class="dropbtn">&#9776;</button>
 		<div id="sidebar" class="dropdown-content">
-      <a class="selected" href="/">Home</a>
+      <a class="selected" href="/home">Home</a>
       <a href="record">Record</a>
       <a href="forum">Forum</a>
       <a href="profile">Profile</a>
       <a href="help">Help</a>
+			<button id="logout" class = "logout">Log Out</button>
 		</div>
   </div>
     <h3 class="title">Record Data</h3>
@@ -36,16 +37,16 @@
 					<input type="text" class="forLabels" id="title" placeholder="Title" name="title"><br>
 
 					<label class="formlabels2" for="subject" class="recordlabel">Subject:</label>
-					<select name="subject" id="subject" class="recordsel">
-						<option value="recsleep" id="subject">Sleeping</option>
-						<option value="Mood" id="subject">Mood</option>
-						<option value="Exercise" id="subject">Exercise</option>
+					<select name="Subject" id="subject" class="recordsel">
+						<option value="Sleep">Sleeping</option>
+						<option value="Mood">Mood</option>
+						<option value="Excercise">Excercise</option>
 					</select><br>
 
 
 
 		</div><br>
-		<div class="group" id="recsleep">
+		<div class="group" id="Sleep">
 		<p> How many hours did you sleep last night?</p>
 		<input type="text" id="exc" name="title"><br>
 	</div>
@@ -63,8 +64,8 @@
 			</div>
 		<p>&#160;</p>
 
-		<a href="/"><button type="button" class="cancel" value="cancel">Cancel</button></a>
-		<input type="submit" id="submitBtn" class="btn btn-default" value="Save"></input><br>
+		<a href="/home"><button type="button" class="cancel" value="cancel">Cancel</button></a>
+		<button type="button" id="saved" class="save">Save</button>
 
 		<div id="finish" class="finish">
 			<p>log successfully saved!</p>
