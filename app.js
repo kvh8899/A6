@@ -15,6 +15,8 @@ var help = require('./routes/help');
 var profile = require('./routes/profile');
 var addRecords = require('./routes/addRecords');
 var login = require('./routes/index');
+var addPost = require('./routes/addPost');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -49,6 +51,7 @@ app.get("/help",help.viewHelp);
 app.get("/forum",forum.viewForum);
 app.get("/profile",profile.viewProfile);
 app.get("/addRecords",addRecords.addData);
+app.get("/addPost",addPost.post);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

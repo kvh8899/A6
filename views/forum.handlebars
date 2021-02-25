@@ -2,12 +2,18 @@
 <head>
 	<title>Wellness Tracker</title>
 	<meta charset="utf-8">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="routes/addPost"></script>
+	<script src="routes/addRecords.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/post.css" rel="stylesheet">
 	<script src="/js/bar.js"></script>
+	<script src="/js/popUp.js"></script>
+	<script src="/js/forumRecords.js"></script>
 </head>
 
 <body>
@@ -24,6 +30,42 @@
 		</div>
   </div>
     <h3 class="title">Forum</h3>
+    <br>
+    <button onClick="openModal()" id="button">+ Add a new post</button>
+
+    {{#each posts}}
+		<div class="posts">
+
+			<h3>{{topic}}</h3>
+
+			<p>{{message}}</p>
+			<p>{{recordName}}<p>
+		</div>
+	{{/each}}
+
+    <div id="myModal" class="modal">
+
+    	<div class="modal-content">
+    		<button onClick="openModal()" id="close">x</button>
+
+    		<form id="addPosts" role="form" method="get" action="/addPost">
+					<label class="formlabels" for="topic" id="topic" name="topic">Topic:     </label>
+					<input type="text" class="forLabels" id="topic" name="topic"><br><br>
+					<label class="formlabelsMessage" for="message">Message:</label>
+					<textarea name="message" rows="10" cols="30"></textarea><br><br>
+						<label for="title" class="formlabels">Choose a record:</label>
+						 <input type="button" value="Click"onClick="forumRecord()">
+						<select class="formLabels" id="arr" name="recordName"></select>
+						<br><br>
+
+
+
+
+
+					<input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input><br>
+				</form>
+				</div><br>
+		</div>
 	</div>
 
 
