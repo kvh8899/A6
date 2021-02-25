@@ -6,14 +6,19 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="routes/addPost"></script>
 	<script src="routes/addRecords.js"></script>
+	<script src="routes/forumLink.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/post.css" rel="stylesheet">
+	<link href="/css/edit-post.css" rel="stylesheet">
 	<script src="/js/bar.js"></script>
 	<script src="/js/popUp.js"></script>
 	<script src="/js/forumRecords.js"></script>
+	<script src="/js/deletePosts2.js"></script>
+
+
 </head>
 
 <body>
@@ -21,45 +26,52 @@
 		<div class="dropdown">
 		<button onClick="openMenu()" class="dropbtn">&#9776;</button>
 		<div id="sidebar" class="dropdown-content">
-			<a class="selected" href="/">Home</a>
+			<a class="selected" href="/home">Home</a>
 			<a href="record">Record</a>
 			<a href="forum">Forum</a>
 			<a href="profile">Profile</a>
 			<a href="help">Help</a>
+			<button id="logout" class = "logout">Log Out</button>
 		</div>
   </div>
     <h3 class="title">Forum</h3>
     <br>
-    <button onClick="openModal()" id="button">+ Add a new post</button>
+    <button onClick="openModal()" id="button">+ Add a new post</button><br><br>
 
-    {{#each posts}}
-		<div class="posts">
-		
-			<h3>{{topic}}</h3>
-		
-			<p>{{message}}</p>
-			<p>{{recordName}}<p>
-		</div>
-	{{/each}}
     
+    {{#each posts}}
+    
+    <button id="post">
+		<div class="posts">
+
+			<h3>{{topic}}</h3>
+
+			<p>{{message}}</p>
+			<p>{{recordName}}<p><br>
+			<button onClick="deletePost()" name="posts" class = "posts" id="del">Delete</button>
+		</div>
+		</button>
+	
+	{{/each}}
+
     <div id="myModal" class="modal">
 
     	<div class="modal-content">
     		<button onClick="openModal()" id="close">x</button>
-    		
+
     		<form id="addPosts" role="form" method="get" action="/addPost">
 					<label class="formlabels" for="topic" id="topic" name="topic">Topic:     </label>
 					<input type="text" class="forLabels" id="topic" name="topic"><br><br>
 					<label class="formlabelsMessage" for="message">Message:</label>
 					<textarea name="message" rows="10" cols="30"></textarea><br><br>
-						<label for="title" class="formlabels">Choose a record:</label>
-						 <input type="button" value="Click"onClick="forumRecord()">
+						<label for="title" class="formlabels">Find records:</label>
+						 <input type="button" value="Attach"onClick="forumRecord()">
 						<select class="formLabels" id="arr" name="recordName"></select>
 						<br><br>
-						
 
-				
-					
+
+
+
 
 					<input type="submit" id="submitBtn" class="btn btn-default" value="Post"></input><br>
 				</form>
