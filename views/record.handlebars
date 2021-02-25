@@ -17,11 +17,12 @@
 		<div class="dropdown">
 		<button onClick="openMenu()" class="dropbtn">&#9776;</button>
 		<div id="sidebar" class="dropdown-content">
-      <a class="selected" href="/">Home</a>
+      <a class="selected" href="/home">Home</a>
       <a href="record">Record</a>
       <a href="forum">Forum</a>
       <a href="profile">Profile</a>
       <a href="help">Help</a>
+			<button id="logout" class = "logout">Log Out</button>
 		</div>
   </div>
     <h3 class="title">Record Data</h3>
@@ -35,7 +36,7 @@
 
 					<label class="formlabels2" for="subject" class="recordlabel">Subject:</label>
 					<select name="Subject" id="subject" class="recordsel">
-						<option value="recsleep">Sleeping</option>
+						<option value="Sleep">Sleeping</option>
 						<option value="Mood">Mood</option>
 						<option value="Excercise">Excercise</option>
 					</select><br>
@@ -43,7 +44,7 @@
 
 
 		</div><br>
-		<div class="group" id="recsleep">
+		<div class="group" id="Sleep">
 		<p> How many hours did you sleep last night?</p>
 		<input type="text" id="exc" name="title"><br>
 	</div>
@@ -61,12 +62,12 @@
 			</div>
 		<p>&#160;</p>
 
-		<a href="/"><button type="button" class="cancel" value="cancel">Cancel</button></a>
+		<a href="/home"><button type="button" class="cancel" value="cancel">Cancel</button></a>
 		<button type="button" id="saved" class="save">Save</button>
 
 		<div id="finish" class="finish">
 			<p>log successfully saved!</p>
-			<a href="/"><button type="button" id="goback" class="goback">Home</button></a>
+			<a href="/home"><button type="button" id="goback" class="goback">Home</button></a>
 		</div>
 	</div>
 	</div>
