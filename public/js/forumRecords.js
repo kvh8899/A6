@@ -23,7 +23,8 @@
         }
 
 function deletePost(){
-    document.getElementById("post").style.visibility = 'hidden';
+    //document.getElementById("post").style.visibility = 'hidden';
+    alert("Delete and edit coming soon!")
     //x.style.display = "none";
     //var y = document.getElementById("delete");
     //y.style.display = "none";

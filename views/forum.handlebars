@@ -12,6 +12,7 @@
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/post.css" rel="stylesheet">
+	<link href="/css/edit-post.css" rel="stylesheet">
 	<script src="/js/bar.js"></script>
 	<script src="/js/popUp.js"></script>
 	<script src="/js/forumRecords.js"></script>
@@ -46,9 +47,10 @@
 			<h3>{{topic}}</h3>
 
 			<p>{{message}}</p>
-			<p>{{recordName}}<p><br><br>
+			<p>{{recordName}}<p><br>
+			<button onClick="deletePost()" name="posts" class = "posts" id="del">Delete</button>
 		</div>
-		</button><br><br>
+		</button>
 	
 	{{/each}}
 
