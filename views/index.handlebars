@@ -3,46 +3,69 @@
 	<title>Wellness Tracker</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<script src="/js/bar.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
 </head>
 
 <body>
-	<div id="main" class="screen">
-		<div class="dropdown">
-		<button onClick="openMenu()" class="dropbtn">&#9776;</button>
-		<div id="sidebar" class="dropdown-content">
-				<a class="selected" href="#">Home</a>
-				<a href="record">Record</a>
-				<a href="forum">Forum</a>
-				<a href="profile">Profile</a>
-				<a href="help">Help</a>
-				<button id="logout" class = "logout">Log Out</button>
+	<div id="main" class="jumbotron">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+		<button class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+		<div id="sidebar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-left">
+				<li><a class="selected" href="#">Home</a>
+				</li>
+				<li><a href="record">Record</a>
+					</li>
+				<li><a href="forum">Forum</a>
+					</li>
+				<li><a href="profile">Profile</a>
+					</li>
+				<li><a href="help">Help</a>
+					</li>
+				<li><button type="button" id="logout" class="btn btn-danger">Log Out</button>
+					</li>
+				</ul>
 		</div>
+	</div>
+</div>
 	{{#each data}}
 	</div>
-		<h3 class="welcome"> Welcome,</h3>
-		<h3 class="name">{{name}}</h3>
+		<h3 class="welcome"> Welcome, {{name}}</h3>
 		<p>Check out your stats for the day!:</p>
 	{{/each}}
 		<div class="data">
-			<button onClick="graph()" class="dropmenu">&#x22EE;</button>
+			<button type="button" onClick="graph()" class="btn btn-primary">Graph Settings</button>
 			<div id="options" class="graph-content">
-				<label for="graph">Graph Type</label>
-					<select name="graph" id="graph">
-					<option value="sleep">Sleep</option>
-					</select>
-					<label for="graph">Graph Type</label>
-					<select name="X-axis" id="graph">
+				<p class="infos">Select an X-axis and a Y-axis to visualize your data overtime!</p>
+					<label class="grphxlabel" for="graph">X-axis</label>
+					<select name="X-axis" class="x-axis" id="graph">
 					<option value="day">day</option>
+					<option value="week">week</option>
+					<option value="month">month</option>
 					</select>
-					<label for="graph">Graph Type</label>
-					<select name="Y-axis" id="graph">
-					<option value="mood">mood</option>
-					</select>
+					<div>
+						<span style="white-space: nowrap">
+							<label for="graph" class="grphylabel" >Y-axis</label>
+							<select name="Y-axis" class="y-axis" id="graph">
+								<option value="mood">mood</option>
+								<option value="sleep">sleep</option>
+								<option value="excercise">excercise</option>
+							</select>
+						</span>
+					</div>
 			</div>
 	  </div>
 		<div class="graph">
