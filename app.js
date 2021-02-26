@@ -55,6 +55,9 @@ app.get("/addRecords",addRecords.addData);
 app.get("/addPost",addPost.post);
 app.get("/forumLink", forumLink.link);
 app.get("/deletePosts2", deletePosts2.delete);
+app.get('routes/addRecords.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'login-file.js'));
+});
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

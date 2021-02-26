@@ -1,6 +1,6 @@
 var data = require("../data.json");
 
-exports.addData = function(request, response) {    
+exports.addData = function(request, response) { 
 	// Your code goes here
 	var recordData = {
 		"date": request.query.date,
@@ -17,4 +17,5 @@ exports.addData = function(request, response) { 
 	console.log(recordData);
 	//console.log(records["data"]);*/
 	response.render("record", data);
+	
 }

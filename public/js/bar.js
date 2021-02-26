@@ -1,3 +1,4 @@
+
 function openMenu() {
   document.getElementById("sidebar").classList.toggle("show");
 }
@@ -10,16 +11,16 @@ function data(obj) {
   this.subject = obj.subject;
   this.input = obj.input;
 }
-function alert(){
-  alert("log successfully saved!");
+function weewoo(){
+  alert("record saved");
 }
 $(document).ready(function () {
   $('#subject').change(function() {
-    $('#date').val('');
-    $('#title').val('');
+    $('#dates').val('');
+    $('#titleRecord').val('');
   });
   $('.group').hide();
-  $('#Sleep').show();
+  $('#Sleeping').show();
   $('#subject').change(function () {
     $('.group').hide();
     $('#'+$(this).val()).show();

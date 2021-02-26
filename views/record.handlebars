@@ -9,9 +9,7 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/bootstrap.css" rel="stylesheet">
-
 	<script src="/js/bar.js"></script>
-	<script src="routes/addRecords.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 
@@ -47,7 +45,7 @@
 		<div class="submitform">
 				<form id="addRecord" role="form" method="get" action="/addRecords">
 					<label class="formlabels" id="date" for="date" name="date">Date:</label>
-					<input type="text" class="forLabels" id="date" placeholder="mm/dd/yyyy" name="date"><br>
+					<input type="text" class="forLabels" id="dates" placeholder="mm/dd/yyyy" name="date"><br>
 
 					<label class="formlabels" for="titleRecord" name="titleRecord">Title:</label>
 					<input type="text" class="forLabels" id="titleRecord" placeholder="Title" name="titleRecord"><br>
@@ -82,9 +80,8 @@
 
 
 		<a href="/home"><button type="button" class="btn btn-danger" value="cancel">Cancel</button></a>
-		<input onClick="alert()" type="submit" id="submitBtn" class="btn btn-success" value="Save">
+		<input type="submit" id="submitBtn" id="saved" class="btn btn-success" value="Save" onClick="weewoo()">
 
-	
 
 		<div id="submit" class="finish">
 			<p>log successfully saved!</p>
