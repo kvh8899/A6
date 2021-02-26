@@ -47,7 +47,6 @@ html {
   text-align: center;
   width: 350px;
   height: 600px;
-  border: 5px solid black;
   padding: 10px;
   justify-content: center;
   align-items: flex-end;
@@ -57,11 +56,30 @@ html {
   color: gray;
 }
 .data{
-  text-align: right;
+  text-align: left;
 }
 .graph{
-  height: 25px;
-  margin: auto;
+ margin-top: 120px;
+ margin-bottom: 90px
+}
+.infos{
+  text-align: left;
+  margin-left: 10px;
+}
+select.x-axis{
+float:left;
+margin-left: 10px;
+ }
+ .grphxlabel{
+float:left;
+margin-left: 10px;
+ }
+
+select.y-axis{
+margin-left: 7px;
+}
+.grphylabel{
+margin-left: 10px;
 }
 .welcome{
   padding: 10px;
@@ -144,6 +162,7 @@ samp {
   position: relative;
   display: inline-block;
   float: left;
+
 }
 .data {
   position: relative;
@@ -168,6 +187,9 @@ samp {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border: 3px solid darkgray;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 
 }
 /* Links inside the dropdown */
@@ -177,7 +199,10 @@ samp {
   text-decoration: none;
   display: block;
 }
-
+.thetitle{
+  margin-top: 40px;
+  margin-bottom: -20px;
+}
 .title{
   line-height: 100px;
   margin-left: -950px;
@@ -1989,9 +2014,10 @@ label {
 .formlabels2{
 margin-top: 20px;
 margin-left: -20px;
+margin-bottom:-100;
 }
 .submitform{
-  border: solid;
+
 }
 .cancel{
   background-color: grey;
@@ -4040,7 +4066,9 @@ input[type="button"].btn-block {
   float: none;
   width: 1%;
 }
-
+.group{
+  margin-top: -50px;
+}
 .btn-group-justified > .btn-group .btn {
   width: 100%;
 }
