@@ -13,7 +13,7 @@ exports.addData = function(request, response) { 
 	console.log(request.query.date);
 	console.log(request.query.titleRecord);
 	console.log(data.records);
-	//data.records.push(recordData);
+	data.records.push(recordData);
 	console.log(recordData);
 	//console.log(records["data"]);*/
 	response.render("record", data);
