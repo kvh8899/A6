@@ -22,10 +22,10 @@ $(document).ready(function () {
     $('#'+$(this).val()).show();
 
   });
-  $('#saved').click(function(e){
+  $('#Saved').click(function(e){
     e.preventDefault();
-    $(".cancel").hide();
-    $(".save").hide();
+    //$(".cancel").hide();
+    //$(".save").hide();
     $(".finish").show();
   });
   $('#logout').click(function(e){

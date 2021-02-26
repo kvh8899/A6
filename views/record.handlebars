@@ -53,16 +53,16 @@
 					<input type="text" class="forLabels" id="titleRecord" placeholder="Title" name="titleRecord"><br>
 
 					<label class="formlabels2" for="subject" class="recordlabel">Subject:</label>
-					<select name="Subject" id="subject" class="recordsel">
-						<option value="Sleep">Sleeping</option>
-						<option value="Mood">Mood</option>
-						<option value="Excercise">Excercise</option>
+					<select name="subject" id="subject" class="recordsel">
+						<option name="subject" value="Sleeping">Sleeping</option>
+						<option name="subject" value="Mood">Mood</option>
+						<option name="subject" value="Exercise">Excercise</option>
 					</select><br>
 
 
 
 		</div><br>
-		<div class="group" id="Sleep">
+		<div class="group" id="Sleeping">
 		<p> How many hours did you sleep last night?</p>
 		<input type="text" id="exc" name="title"><br>
 	</div>
@@ -74,7 +74,7 @@
 		<input type="text" id="stress" name="title"><br>
 		</div>
 
-		<div class="group" id="Excercise">
+		<div class="group" id="Exercise">
 			<p> How many hours of excercise did you get yesterday?</p>
 			<input type="text" id="excer" name="title"><br>
 			</div>
@@ -82,11 +82,11 @@
 
 
 		<a href="/home"><button type="button" class="btn btn-danger" value="cancel">Cancel</button></a>
-		<input type="submit" id="submitBtn" class="btn btn-success" value="Save">
+		<input type="submit" id="submitBtn" id="saved" class="btn btn-success" value="Save">
 
 	
 
-		<div id="finish" class="finish">
+		<div id="submit" class="finish">
 			<p>log successfully saved!</p>
 			<a href="/home"><button type="button" id="goback" class="btn btn-primary goback">Home</button></a>
 		</div>
