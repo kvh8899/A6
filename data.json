@@ -1,11 +1,19 @@
 
 {
     "data":[
-                {
-                    "name": "Elias",
-                    "age": "50",
-                    "city": "San Diego",
-                    "state": "California"
-                }
+        {
+            "name": "Elias Fang",
+            "age": "50",
+            "city": "San Diego",
+            "state": "California",
+            "records": [
+            	{
+	            	"date": "4/10/2010",
+			        "title": "Sleep is for the weak",
+			        "subject": "Sleeping",
+			        "input":"6"
+		    	}
             ]
+        }
+    ]
 }

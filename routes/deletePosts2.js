@@ -1,14 +1,14 @@
 var posts = require("../posts.json");
 
-exports.post = function(request, response) { 
+exports.delete = function(request, response) { 
 	var postData = {
 		"topic": request.query.topic,
 		"message": request.query.message,
 		"recordName": request.query.recordName
 	};
-	posts.posts.push(postData);
+	//var del1 = request.query.message;
+	delete posts.posts(postData);
 	console.log(posts);
-	//console.log(records["data"]);
+	//delete posts.posts[del1];
 	response.render("forum", posts);
 }
-

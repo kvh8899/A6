@@ -13,12 +13,19 @@
            
         //var elmts = ["HTML", "CSS", "JS", "PHP", "jQuery"]; 
             for (var i = 0; i < elmts.length; i++) { 
-                var optn = elmts[i]; 
-                var el = document.createElement("option"); 
-                el.textContent = optn; 
-                el.value = optn; 
-                select.appendChild(el); 
+                var option = elmts[i]; 
+                var x = document.createElement("option"); 
+                x.textContent = option; 
+                x.value = option; 
+                select.appendChild(x); 
                 console.log(i)
             } 
         }
-            
+
+function deletePost(){
+    //document.getElementById("post").style.visibility = 'hidden';
+    alert("Delete and edit coming soon!")
+    //x.style.display = "none";
+    //var y = document.getElementById("delete");
+    //y.style.display = "none";
+}
