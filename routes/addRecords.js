@@ -5,7 +5,7 @@ exports.addData = function(request, response) { 
 	var recordData = {
 		"date": request.query.date,
 		"title": request.query.titleRecord,
-		"subject": "Sleep",
+		"subject": request.query.subject,
 		"input": "3"
 		//"time": request.query.time,
 		//"scale": request.query.scale
