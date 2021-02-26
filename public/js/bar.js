@@ -11,13 +11,16 @@ function data(obj) {
   this.subject = obj.subject;
   this.input = obj.input;
 }
+function weewoo(){
+  alert("record saved");
+}
 $(document).ready(function () {
   $('#subject').change(function() {
     $('#dates').val('');
     $('#titleRecord').val('');
   });
   $('.group').hide();
-  $('#Sleep').show();
+  $('#Sleeping').show();
   $('#subject').change(function () {
     $('.group').hide();
     $('#'+$(this).val()).show();
