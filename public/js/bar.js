@@ -13,8 +13,8 @@ function data(obj) {
 }
 $(document).ready(function () {
   $('#subject').change(function() {
-    $('#date').val('');
-    $('#title').val('');
+    $('#dates').val('');
+    $('#titleRecord').val('');
   });
   $('.group').hide();
   $('#Sleep').show();
@@ -22,12 +22,6 @@ $(document).ready(function () {
     $('.group').hide();
     $('#'+$(this).val()).show();
 
-  });
-  $('#submitBtn').click(function(e){
-    e.preventDefault();
-    $(".cancel").hide();
-    $(".save").hide();
-    $(".finish").show();
   });
   $('#logout').click(function(e){
     if(confirm('Are you sure you want to logout?')){

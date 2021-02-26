@@ -10,12 +10,11 @@ exports.addData = function(request, response) { 
 		//"time": request.query.time,
 		//"scale": request.query.scale
 	};
-	function recordDatas(){
-		console.log(data);
-	}
-
-	//data.records.push(recordData);
-
+	console.log(request.query.date);
+	console.log(request.query.titleRecord);
+	console.log(data.records);
+	data.records.push(recordData);
+	console.log(recordData);
 	//console.log(records["data"]);*/
 	response.render("record", data);
 }
