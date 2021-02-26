@@ -1,3 +1,4 @@
+
 function openMenu() {
   document.getElementById("sidebar").classList.toggle("show");
 }
@@ -22,7 +23,7 @@ $(document).ready(function () {
     $('#'+$(this).val()).show();
 
   });
-  $('#saved').click(function(e){
+  $('#submitBtn').click(function(e){
     e.preventDefault();
     $(".cancel").hide();
     $(".save").hide();
