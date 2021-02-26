@@ -2,11 +2,11 @@
 <head>
 	<title>Wellness Tracker</title>
 	<meta charset="utf-8">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="routes/addPost"></script>
 	<script src="routes/addRecords.js"></script>
-	<script src="routes/forumLink.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 	<script src="/js/bar.js"></script>
 	<script src="/js/popUp.js"></script>
 	<script src="/js/forumRecords.js"></script>
-	<script src="/js/deletePosts2.js"></script>
+	
 
 
 </head>
@@ -37,18 +37,27 @@
     <h3 class="title">Forum</h3>
     <br>
     <button onClick="openModal()" id="button">+ Add a new post</button><br><br>
+    <button id="postButton">
+		<div class="posts">
 
+			<h3>Sleep Schedule</h3>
+
+			<p>Haley Hammock: Here is my sleep schedule plan!</p>
+			<p>Good Sleep<p>
+			<p>Delete and edit function coming soon!</p>
+		</div>
+		</button>
     
     {{#each posts}}
     
-    <button id="post">
+    <button id="postButton">
 		<div class="posts">
 
 			<h3>{{topic}}</h3>
 
 			<p>{{message}}</p>
-			<p>{{recordName}}<p><br>
-			<button onClick="deletePost()" name="posts" class = "posts" id="del">Delete</button>
+			<p>{{recordName}}<p>
+			<p>Delete and edit function coming soon!</p>
 		</div>
 		</button>
 	
@@ -63,7 +72,7 @@
 					<label class="formlabels" for="topic" id="topic" name="topic">Topic:     </label>
 					<input type="text" class="forLabels" id="topic" name="topic"><br><br>
 					<label class="formlabelsMessage" for="message">Message:</label>
-					<textarea name="message" rows="10" cols="30"></textarea><br><br>
+					<textarea name="message" rows="10" cols="25"></textarea><br><br>
 						<label for="title" class="formlabels">Find records:</label>
 						 <input type="button" value="Attach"onClick="forumRecord()">
 						<select class="formLabels" id="arr" name="recordName"></select>
