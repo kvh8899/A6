@@ -26,12 +26,12 @@ $(document).ready(function () {
     $('#'+$(this).val()).show();
 
   });
-  $('#Saved').click(function(e){
+  /*$('#Saved').click(function(e){
     e.preventDefault();
     //$(".cancel").hide();
     //$(".save").hide();
     $(".finish").show();
-  });
+  });*/
   $('#logout').click(function(e){
     if(confirm('Are you sure you want to logout?')){
       location.href = '/';
